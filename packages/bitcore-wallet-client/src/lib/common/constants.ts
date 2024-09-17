@@ -6,7 +6,8 @@ export const Constants = {
     P2SH: 'P2SH',
     P2PKH: 'P2PKH',
     P2WPKH: 'P2WPKH',
-    P2WSH: 'P2WSH'
+    P2WSH: 'P2WSH',
+    P2TR: 'P2TR'
   },
   // not used, since Credentials 2.0
   DERIVATION_STRATEGIES: {
@@ -39,14 +40,20 @@ export const Constants = {
     'usdt'
   ],
 
-  CHAINS: ['btc', 'bch', 'eth', 'matic', 'xrp', 'doge', 'ltc'],
+  CHAINS: ['btc', 'bch', 'eth', 'matic', 'xrp', 'doge', 'ltc', 'arb', 'base', 'op'],
   UTXO_CHAINS: ['btc', 'bch', 'doge', 'ltc'],
-  EVM_CHAINS: ['eth', 'matic'],
+  EVM_CHAINS: ['eth', 'matic', 'arb', 'base', 'op'],
   ETH_TOKEN_OPTS: CWC.Constants.ETH_TOKEN_OPTS,
   MATIC_TOKEN_OPTS: CWC.Constants.MATIC_TOKEN_OPTS,
+  ARB_TOKEN_OPTS: CWC.Constants.ARB_TOKEN_OPTS,
+  BASE_TOKEN_OPTS: CWC.Constants.BASE_TOKEN_OPTS,
+  OP_TOKEN_OPTS: CWC.Constants.OP_TOKEN_OPTS,
   UNITS: CWC.Constants.UNITS,
   EVM_CHAINSUFFIXMAP: {
     eth: 'e',
-    matic: 'm'
+    matic: 'm',
+    arb: 'arb',
+    base: 'base',
+    op: 'op',
   }
 };

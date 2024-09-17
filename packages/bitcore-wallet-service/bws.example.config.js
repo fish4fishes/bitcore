@@ -40,7 +40,13 @@ module.exports = {
       testnet: {
         url: 'https://api.bitcore.io',
         regtestEnabled: false
-      }
+      },
+      testnet3: {
+        url: 'https://api.bitcore.io'
+      },
+      signet: {
+        url: 'https://api.bitcore.io'
+      },
     },
     bch: {
       livenet: {
@@ -49,7 +55,19 @@ module.exports = {
       testnet: {
         url: 'https://api.bitcore.io',
         regtestEnabled: false
-      }
+      },
+      testnet3:{
+        url: 'https://api.bitcore.io'
+      },
+      testnet4: {
+        url: 'https://api.bitcore.io'
+      },
+      scalenet: {
+        url: 'https://api.bitcore.io'
+      },
+      chipnet: {
+        url: 'https://api.bitcore.io'
+      },
     },
     eth: {
       livenet: {
@@ -58,7 +76,13 @@ module.exports = {
       testnet: {
         url: 'https://api-eth.bitcore.io',
         regtestEnabled: false
-      }
+      },
+      sepolia: {
+        url: 'https://api-eth.bitcore.io'
+      },
+      holesky: {
+        url: 'https://api-eth.bitcore.io'
+      },
     },
     xrp: {
       livenet: {
@@ -148,6 +172,14 @@ module.exports = {
       changelly: {
         disabled: false,
         removed: false
+      },
+      thorswap: {
+        disabled: false,
+        removed: false,
+        // config: {
+        //   affiliateAddress: 'thorname_here',
+        //   affiliateBasisPoints: 'type_number_fee_here'
+        // }
       }
     },
   },
@@ -271,6 +303,20 @@ module.exports = {
   //     appProviderId: 'simplex_web_provider_id_here'
   //   }
   // },
+  // thorswap : {
+  //   sandbox: {
+  //     api: 'https://dev-api.thorswap.net',
+  //     apiKey: 'thorswap_sandbox_api_key_here',
+  //     secretKey: 'thorswap_sandbox_secret_key_here',
+  //     referer: 'thorswap_sandbox_referer_here'
+  //   },
+  //   production: {
+  //     api: 'https://api.thorswap.net',
+  //     apiKey: 'thorswap_production_api_key_here',
+  //     secretKey: 'thorswap_production_secret_key_here',
+  //     referer: 'thorswap_production_referer_here'
+  //   },
+  // },
   // transak : {
   //   sandbox: {
   //     api: 'https://api-stg.transak.com',
@@ -344,6 +390,7 @@ module.exports = {
   //  ignoreTLS: true,
   //  subjectPrefix: '[Wallet Service]',
   //  from: 'wallet-service@bitcore.io',
+  //  // Note: Prod templates are in a the copay-emails repo (https://github.com/bitpay/copay-emails)
   //  templatePath: 'templates',
   //  defaultLanguage: 'en',
   //  defaultUnit: 'btc',

@@ -42,6 +42,15 @@ export type GetBlockParams = ChainNetwork & {
   args?: Partial<{ startDate: Date; endDate: Date; date: Date } & StreamingFindOptions<IBtcBlock>>;
 };
 
+export interface ExternalGetBlockResults {
+  block?: number | string;
+  height?: number;
+  startDateBlock?: number;
+  endDateBlock?: number;
+  startBlock: number;
+  endBlock: number;
+}
+
 export type GetBlockBeforeTimeParams = ChainNetwork & {
   time?: Date | string;
 };
@@ -54,9 +63,11 @@ export type StreamBlocksParams = ChainNetwork & {
   res: Response;
 };
 
+export type FeeMode = 'ECONOMICAL' | 'CONSERVATIVE';
+
 export type GetEstimateSmartFeeParams = ChainNetwork & {
   target: number;
-  mode?: 'ECONOMICAL' | 'CONSERVATIVE';
+  mode?: FeeMode;
   txType?: number | string;
 };
 
@@ -191,5 +202,7 @@ export interface IChainStateService {
 }
 
 export interface ChainStateServices {
-  [key: string]: IChainStateService;
+  [chain: string]: {
+    [network: string]: IChainStateService;
+  }
 }
